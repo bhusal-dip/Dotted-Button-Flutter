@@ -99,7 +99,7 @@ class DottedButton extends StatelessWidget {
   /// paint color. [CircularIntervalList] is populated with the [dashPattern] to
   /// render the appropriate pattern. The [borderRadius] property is taken into account
   /// only if the [borderType] is [BorderType.RRect].
-  const DottedButton({
+  DottedButton({
     super.key,
     this.onTap,
     required this.child,
@@ -116,7 +116,9 @@ class DottedButton extends StatelessWidget {
     this.borderRadius = 10,
     this.boxShadow,
     this.borderType = BorderType.Rect,
-  });
+  }) {
+    assert(_isValidDashPattern(dashPattern), 'Invalid dash pattern');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -196,13 +198,14 @@ class DottedButton extends StatelessWidget {
   /// * Cannot be null or empty
   /// * If [dashPattern] has only 1 element, it cannot be 0
   bool _isValidDashPattern(List<double>? dashPattern) {
-    Set<double>? _dashSet = dashPattern?.toSet();
-    if (_dashSet == null) return false;
-    if (_dashSet.length == 1 && _dashSet.elementAt(0) == 0.0) return false;
-    if (_dashSet.length == 0) return false;
+    Set<double>? dashSet = dashPattern?.toSet();
+    if (dashSet == null) return false;
+    if (dashSet.length == 1 && dashSet.elementAt(0) == 0.0) return false;
+    if (dashSet.isEmpty) return false;
     return true;
   }
 }
 
 //Types of the border
+// ignore: constant_identifier_names
 enum BorderType { Circle, RRect, Rect, Oval }
