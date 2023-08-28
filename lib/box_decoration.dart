@@ -1,5 +1,6 @@
 part of "dotted_button.dart";
 
+// ignore: camel_case_types
 class _decoration {
   final BorderType? borderType;
   final dynamic borderRadius;

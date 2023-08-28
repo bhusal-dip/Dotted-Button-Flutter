@@ -28,9 +28,9 @@ class _BorderPainter extends CustomPainter {
       ..color = color
       ..style = PaintingStyle.stroke;
 
-    Path _path = _getPath(size);
+    Path path = _getPath(size);
 
-    canvas.drawPath(_path, paint);
+    canvas.drawPath(path, paint);
   }
 
   /// Returns a [Path] based on the the [borderType] parameter
@@ -118,9 +118,9 @@ class _BorderPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(_BorderPainter oldDelegate) {
-    return oldDelegate.strokeWidth != this.strokeWidth ||
-        oldDelegate.color != this.color ||
-        oldDelegate.dashPattern != this.dashPattern ||
-        oldDelegate.borderType != this.borderType;
+    return oldDelegate.strokeWidth != strokeWidth ||
+        oldDelegate.color != color ||
+        oldDelegate.dashPattern != dashPattern ||
+        oldDelegate.borderType != borderType;
   }
 }

@@ -34,6 +34,7 @@ Path dashPath(
   return dest;
 }
 
+// ignore: constant_identifier_names
 enum _DashOffsetType { Absolute, Percentage }
 
 /// Specifies the starting position of a dash array on a path, either as a
