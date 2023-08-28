@@ -18,17 +18,17 @@ A easy flutter package to have a custom button with various shape with dotted bo
 
 ### Add dependency
 
-You can use the command to add dio as a dependency with the latest stable version:
+You can use the command to add dotted_button as a dependency with the latest stable version:
 
 ```console
-$ dart pub add dotted_button_flutter
+$ dart pub add dotted_button
 ```
 
-Or you can manually add dio into the dependencies section in your pubspec.yaml:
+Or you can manually add dotted_button into the dependencies section in your pubspec.yaml:
 
 ```yaml
 dependencies:
-  dotted_button_flutter: ^replace-with-latest-version
+  dotted_button: ^replace-with-latest-version
 ```
 
 ### Super simple to use
