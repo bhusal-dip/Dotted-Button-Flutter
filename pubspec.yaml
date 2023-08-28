@@ -4,9 +4,9 @@ version: 0.0.1
 description: |
   A new easy flutter package to have a custom button with various shape and dotted border.
 topics: 
-  - Custom Button
-  - Dotted Border
-  - Various Shape 
+  - custom button
+  - dotted border
+  - various shape 
 repository: https://github.com/bhusal-dip/Dotted-Button-Flutter
 
 environment:
