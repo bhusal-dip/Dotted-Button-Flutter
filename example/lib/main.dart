@@ -28,17 +28,14 @@ class _MyAppState extends State<MyApp> {
               padding: const EdgeInsets.all(8.0),
               child: Wrap(
                 alignment: WrapAlignment.center,
-                // crossAxisAlignment: WrapCrossAlignment.center,
+                runSpacing: 20,
                 spacing: 8,
                 children: <Widget>[
                   displayMessage,
-                  const SizedBox(height: 100),
+                  const SizedBox(height: 40),
                   rectBorderWidget,
-                  // const SizedBox(height: 20),
                   circleBorderWidget,
-                  // const SizedBox(height: 20),
                   rRectBorderWidget,
-                  const SizedBox(height: 20),
                   ovalBorderWidget,
                 ],
               ),
@@ -60,7 +57,6 @@ class _MyAppState extends State<MyApp> {
           msg = 'Rectangle Border';
         });
       },
-      // color: Colors.transparent,
       child: const Text("Rectangle Border"),
     );
   }
@@ -74,7 +70,8 @@ class _MyAppState extends State<MyApp> {
       },
       height: 230,
       width: 100,
-      margin: const EdgeInsets.all(20),
+      strokeWidth: 5,
+      margin: const EdgeInsets.all(10),
       borderType: BorderType.Oval,
       color: Colors.red,
       boxShadow: const [
@@ -95,15 +92,12 @@ class _MyAppState extends State<MyApp> {
         });
       },
       borderType: BorderType.RRect,
-      // margin: EdgeInsets.all(10),
-
-      boxShadow: [
+      boxShadow: const [
         BoxShadow(
           color: Colors.black,
           blurRadius: 10,
         ),
       ],
-      // color: Colors.transparent,
       borderRadius: 30,
       child: const Text("RRect Border"),
     );
@@ -118,7 +112,6 @@ class _MyAppState extends State<MyApp> {
       },
       height: 130,
       width: 50,
-      // color: Colors.transparent,
       borderType: BorderType.Oval,
       child: const Text("Oval Border"),
     );

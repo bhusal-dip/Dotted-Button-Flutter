@@ -78,10 +78,13 @@ class DottedButton extends StatelessWidget {
   ///  * [PhysicalModel], a widget for showing shadows.
   final List<BoxShadow>? boxShadow;
 
+  /// The dotted border width.
   final double strokeWidth;
 
+  /// List of pattern value to be drawn for the dotted border which is in the format of [dash], [space].
   final List<double> dashPattern;
 
+  /// Type of the border for the given button.
   final BorderType borderType;
 
   /// Creates a custom button.
